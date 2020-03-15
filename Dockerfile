@@ -17,9 +17,6 @@ COPY ./test_requirements.txt /test_requirements.txt
 RUN pip install -r /test_requirements.txt
 RUN rm /test_requirements.txt
 
-# Declare workdir
-WORKDIR /work
-
 # Entrypoint
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
