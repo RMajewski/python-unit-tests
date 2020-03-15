@@ -1,0 +1,15 @@
+name: GitHub Action to run Python unit tests.
+description: 'Run python unit tests using pytest on python 3.7.7-slim docker image.'
+branding:
+  icon: check
+  color: yellow
+runs-on: ubuntu-latest
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+steps:
+  - uses: actions/checkout@master
+  - name: Run Python unit tests
+    uses: RMajewski/python-unit-tests@master
+    with:
+      args: pytest --help
